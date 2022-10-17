@@ -12,15 +12,6 @@ import lombok.Data;
 @Data
 public abstract class AbstractPaymentHandler {
 
-    public AbstractPaymentHandler(int priority) {
-        this.priority = priority;
-    }
-
-    /**
-     * Приоритет обработчика.
-     */
-    private final int priority;
-
     /**
      * Метод будет давать разрешение на обработку платежа.
      *

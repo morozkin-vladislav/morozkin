@@ -18,10 +18,6 @@ public class MinimumAmountHandler extends AbstractPaymentHandler {
     private final Integer AMOUNT = 20;
     private final Integer PERCENTAGES = 10;
 
-    public MinimumAmountHandler(int priority) {
-        super(priority);
-    }
-
     /**
      * ONLINE и меньше 20р.
      *

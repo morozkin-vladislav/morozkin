@@ -16,10 +16,6 @@ public class RangeHandler extends AbstractPaymentHandler {
     private final Integer AMOUNT_MIN = 20;
     private final Integer PERCENTAGES = 17;
 
-    public RangeHandler(int priority) {
-        super(priority);
-    }
-
     /**
      * ONLINE, и находится в диапазоне от 20р до 300р.
      *

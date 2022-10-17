@@ -16,10 +16,6 @@ public class LargeAmountHandler extends AbstractPaymentHandler {
     private final Integer AMOUNT = 300;
     private final Integer PERCENTAGES = 30;
 
-    public LargeAmountHandler(int priority) {
-        super(priority);
-    }
-
     /**
      * ONLINE и больше 300;
      *

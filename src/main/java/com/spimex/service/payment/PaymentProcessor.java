@@ -28,8 +28,8 @@ public class PaymentProcessor implements IPaymentProcessor {
     private ArrayList<AbstractPaymentHandler> handlers;
 
     /**
-     * Метод инициализирует обработчики с определенным приоритетом,
-     * что и будет определять порядок обработки платежа.
+     * Метод инициализирует обработчики в определенном порядке,
+     * в котором они будут вызываться для обработки.
      * <p>
      * Такой подход позволяет быстро создать и добавить
      * (или убрать) обработчик любого приоритета, если это потребуется.
@@ -37,14 +37,13 @@ public class PaymentProcessor implements IPaymentProcessor {
     @Override
     @PostConstruct //метод вызывается сразу после внедрения зависимости
     public void initHandlers() {
-        int n = 0; //приоритет обработчика
         handlers = new ArrayList<>();
 
         //примерно по тестовым данным определил приоритет для каждого обработчика
-        handlers.add(new LargeAmountHandler(n++));
-        handlers.add(new RangeHandler(n++));
-        handlers.add(new MinimumAmountHandler(n++));
-        handlers.add(new ShopHandler(n));
+        handlers.add(new LargeAmountHandler());
+        handlers.add(new RangeHandler());
+        handlers.add(new MinimumAmountHandler());
+        handlers.add(new ShopHandler());
     }
 
     /**

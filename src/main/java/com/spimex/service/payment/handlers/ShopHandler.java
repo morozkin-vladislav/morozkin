@@ -13,9 +13,6 @@ public class ShopHandler extends AbstractPaymentHandler {
      * Переменные по условиям обработчика.
      */
     private final Integer PERCENTAGES = 10;
-    public ShopHandler(int priority) {
-        super(priority);
-    }
 
     /**
      * Обработать, если тип платежа SHOP.
