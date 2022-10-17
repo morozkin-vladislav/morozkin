@@ -12,5 +12,5 @@ public interface IPaymentProcessor {
 
     void process(PaymentEntity payment);
 
-    //boolean checkEnoughMoney(PaymentEntity payment) throws NotEnoughMoneyException;
+    boolean checkEnoughMoney(PaymentEntity payment) throws NotEnoughMoneyException;
 }
